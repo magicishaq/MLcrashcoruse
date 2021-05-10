@@ -88,3 +88,44 @@
 #log loss
 
 #The loss function for linear regression is squared loss. The loss function for logistic regression is Log Loss,
+
+#Classification
+#logicistic regression returns a probility . 1 being positive, 0 = negative. 0.9 is very likley while 0.03 is unlikley
+#0.6? need a classification threshold /desicion threshold
+#predictions in a confusion matrix, true positive: true prediction, true negative; false positive, false negative
+#use classifcation models for these 4 outcomes
+
+#accurancy = guessing how accurate our predictions are; accuracy =  num of correct predictions/ predictions
+#accuracy of classifcation = Tp + TN / Tp+ TN + FP + FP
+
+#class imbalanced dataset (loads of either negative or positive) is not good for measuring accuracy
+
+#What proportion of positive identifications was actually correct? precision tell how many of the positives were correct = Precision = TP / TP + FP
+
+#Recall: What proportion of actual positives was identified correctly? TP/ TP + FN
+
+#raising classifcation will increase precision but lower recall
+
+#decreasing the classifcation will increase false positives and false negatives decrease
+
+#ROC curve ((receiver operating characteristic curve)) is a graph that shows the performance of a classification model at all classification thresholds
+#The cure plots the true positive rate and flase positive rate
+
+#TPR = TP/ TP + FN
+#FPR = FP / FN + TN
+
+#an ROC curve plots the TPR vs FPR at different thresholds. Lowering the classifcation theshold makes more item positive but will increase the false positives
+
+#AUC: Area under the ROC curve , instead of measuring a logistic regession model many times with different classifcation threshols . use a sorting-based algorithm that can provide this information called AUC
+
+#AUC measure the entire 2d space under the curve
+
+#AUC is the probitlity a random positive is on the right side of the threshold
+
+#CLassification: prediction Bias. Logisitic regression should be unbiased ; average of predictions should = average of observations
+
+#prediction bias is the measure of how far apart the averages are
+
+#causes of prediction bias: Incomplete feature set, nosiy data set, buggy pipline, biased training sample , overly strong regularization
+
+#logisitic regression can olny classify things as 1 or 0. to find out the prediction bias, best to bucket the data into groups
